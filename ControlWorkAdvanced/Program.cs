@@ -78,7 +78,16 @@ namespace ControlWorkAdvanced
               )
               );
 
+            int[] arr2 = { 14, 12, 20, 23, 32, 33 };
 
+            Console.WriteLine
+              (
+              string.Join
+              (
+                 " ",
+                 arr2.OrderBy(a => a/10).ThenByDescending(b => b%10).Select(c => c)
+              )
+              );
 
 
             Console.WriteLine("_________________________________________");
