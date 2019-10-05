@@ -67,16 +67,19 @@ namespace ControlWorkAdvanced
 
 
             //№3
-            int[] arr ={ 14, 12, 20, 23, 32,33};
+            string[] arr = { "14","12", "20", "23", "32", "33"};
 
             Console.WriteLine
               (
               string.Join
               (
                  " ",
-                 arr.ToString().Split(',').OrderBy(a=>a.First()).ThenByDescending(b=>b.Last()).Select(c=>c)
+                 arr.OrderBy(a=>a.Substring(0,1)).ThenByDescending(b=>b.Substring(1, 1)).Select(c=>c)
               )
               );
+
+
+
 
             Console.WriteLine("_________________________________________");
 
